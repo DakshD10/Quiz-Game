@@ -28,7 +28,7 @@ public class QuizService {
             }
             reader.close();
 
-            // 🆕 Extracted JSON parsing logic
+            
             JSONArray results = extractResults(responseText.toString());
 
             for (int i = 0; i < results.size(); i++) {
