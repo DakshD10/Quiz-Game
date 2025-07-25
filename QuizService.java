@@ -1,13 +1,14 @@
-import java.io.BufferedReader;
+ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 
 public class QuizService {
 
@@ -58,12 +59,12 @@ public class QuizService {
     }
 
     //  Extracted method
-    private JSONArray extractResults(String jsonResponse) {
+     private JSONArray extractResults(String jsonResponse) {
         try {
             JSONParser parser = new JSONParser();
             JSONObject json = (JSONObject) parser.parse(jsonResponse);
             return (JSONArray) json.get("results");
-        } catch (Exception e) {
+        } catch (ParseException e) { 
             System.out.println("Error parsing JSON: " + e.getMessage());
             return new JSONArray();
         }

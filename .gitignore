@@ -1,18 +1,13 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Environment-dependent path to Maven home directory
-/mavenHomeManager.xml
 # Compiled Java class files
 *.class
 
-# IDE-specific files (IntelliJ)
-*.iml
+# Output directory for compiled files
+/bin/
+
+# IDE-specific files (optional but recommended)
+.vscode/
 .idea/
+*.iml
 
 # Log files
 *.log
-
-# Dependency directories
-/lib/
-/out/
